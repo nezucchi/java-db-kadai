@@ -19,7 +19,7 @@ public class Employees_Chapter04 {
                 "wata4noSQL+2024"
             );
 
-            System.out.println("データベース接続成功");
+            System.out.println("データベース接続成功"+ con);
 
             // SQLクエリを準備
             statement = con.createStatement();
@@ -35,7 +35,7 @@ public class Employees_Chapter04 {
 
             //　SQLクエリを実行（DBMSに送信）
             int rowCnt = statement.executeUpdate(sql);
-            System.out.println("テーブルを作成:rowCnt=" + rowCnt );
+            System.out.println("テーブルを作成しました:更新レコード数=" + rowCnt );
         } catch(SQLException e) {
             System.out.println("エラー発生：" + e.getMessage());
         } finally {
